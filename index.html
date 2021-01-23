@@ -2,25 +2,30 @@
 <html lang="en">
 
 <!--
-  ⛺ ~ 2020 ~ Sebastián Mira
+  ⛺ ~ 2021 ~ Sebastián Mira
 -->	
 	
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="⛺">
+    <meta name="description" content="a curatorial project on virtual landscapism">
     <title>landscape mode</title>
     <link rel="shortcut icon" href="https://cdn-0.smartandroid.fr/wp-content/uploads/2020/06/photo-panorama5.png">
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <script src="/00FF00/processing-1.4.8.min.js"></script>
     </head>
 
-<body>
-    <a-scene
-     loading-screen="enabled: false"; vr-mode-ui="enabled: false">
-    <a-entity environment="preset: default; skyType: atmosphere; sunPosition: 1 7 -2; groundTexture: walkernoise; groundColor: #228B22; groundColor2: #9ACD32; grid: none"></a-entity>
-    <a-entity position="-21.29 0.3 -20" rotation='0 0 0'> <a-camera></a-camera>  </a-entity> 
-    </a-scene>
+
+<body onkeypress="inicio(event)">
+    <canvas data-processing-sources="/00FF00/ERIZO_CHECO.js" style='position: absolute; z-index: auto; width: auto; height: auto; top: auto; right: auto; left: auto' id="canvas"></canvas>
+    <script>
+        function inicio(event) {  
+                                     
+                if (event.which == 32 || event.keyCode == 32) {
+                    location.href='/00FF00/00FF00.html';
+                }
+                       
+        }
+    </script>
 </body>
 </html>
